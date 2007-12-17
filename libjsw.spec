@@ -22,7 +22,6 @@ Source0: http://wolfpack.twu.net/users/wolfpack/%{name}-%{version}.tar.bz2
 License: GPL
 Group: System/Kernel and hardware
 Url: http://wolfpack.twu.net/libjsw/
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: gtk+1.2-devel
 
 %description
