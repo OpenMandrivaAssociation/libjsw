@@ -1,6 +1,6 @@
 %define name libjsw
-%define version 1.5.6
-%define release %mkrel 4
+%define version 1.5.7
+%define release %mkrel 1
 
 %define lib_major 1
 %define lib_name %mklibname jsw %{lib_major}
