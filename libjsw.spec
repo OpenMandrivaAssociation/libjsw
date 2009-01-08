@@ -69,7 +69,7 @@ perl -pi -e 's|#include <jsw.h>|#include "../include/jsw.h"|' js*/*.{c,h}
 
 %build
 pushd libjsw
-  make CFLAGS="$RPM_OPT_FLAGS -fPIC"
+  make CFLAGS="$RPM_OPT_FLAGS -fPIC" LIBS=-lstdc++
 popd
 pushd jscalibrator
   make '*.o'
