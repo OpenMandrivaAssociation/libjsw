@@ -1,5 +1,5 @@
 Name:			libjsw
-Version:		1.5.7
+Version:		1.5.8
 Release:		%mkrel 1
 
 %define lib_major	1
@@ -22,7 +22,7 @@ Group:		System/Kernel and hardware
 URL:		http://wolfsinger.com/~wolfpack/packages/
 Source0:	http://wolfsinger.com/~wolfpack/packages/%{name}-%{version}.tar.bz2
 
-BuildRequires:	gtk+1.2-devel
+#BuildRequires:	gtk+1.2-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
@@ -99,7 +99,7 @@ rm -rf %{buildroot}
 %files -n %{lib_name}
 %defattr(-,root,root)
 %doc README
-%{_libdir}/libjsw.so.*
+%{_libdir}/libjsw.so.%{lib_major}*
 
 %files -n %{devel_name}
 %defattr(-,root,root)
