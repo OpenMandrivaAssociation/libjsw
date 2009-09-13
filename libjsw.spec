@@ -1,6 +1,6 @@
 Name:			libjsw
 Version:		1.5.8
-Release:		%mkrel 1
+Release:		%mkrel 2
 
 %define lib_major	1
 %define lib_name	%mklibname jsw %{lib_major}
