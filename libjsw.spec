@@ -21,7 +21,7 @@ License:	GPLv2+
 Group:		System/Kernel and hardware
 URL:		http://wolfsinger.com/~wolfpack/packages/
 Source0:	http://wolfsinger.com/~wolfpack/packages/%{name}-%{version}.tar.bz2
-#BuildRequires:	gtk+1.2-devel
+BuildRequires:	gtk+1.2-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
