@@ -1,6 +1,6 @@
 Name:			libjsw
 Version:		1.5.8
-Release:		%mkrel 2
+Release:		%mkrel 3
 
 %define lib_major	1
 %define lib_name	%mklibname jsw %{lib_major}
@@ -21,7 +21,6 @@ License:	GPLv2+
 Group:		System/Kernel and hardware
 URL:		http://wolfsinger.com/~wolfpack/packages/
 Source0:	http://wolfsinger.com/~wolfpack/packages/%{name}-%{version}.tar.bz2
-
 #BuildRequires:	gtk+1.2-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
@@ -43,7 +42,7 @@ linked with the Joystick Wrapper library.
 Summary:	Development tools for programs using the Joystick Wrapper library
 Group:		Development/C
 Requires:	%{lib_name} = %{version}
-Provides:	%{name}-devel = %{version}-%{release}
+Provides:	jsw-devel = %{version}-%{release}
 Obsoletes:	%{old_devel_name}
 
 %description -n	%{devel_name}
