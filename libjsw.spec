@@ -1,6 +1,6 @@
 Name:			libjsw
 Version:		1.5.8
-Release:		%mkrel 4
+Release:		%mkrel 5
 
 %define lib_major	1
 %define lib_name	%mklibname jsw %{lib_major}
@@ -21,7 +21,6 @@ License:	GPLv2+
 Group:		System/Kernel and hardware
 URL:		http://wolfsinger.com/~wolfpack/packages/
 Source0:	http://wolfsinger.com/~wolfpack/packages/%{name}-%{version}.tar.bz2
-BuildRequires:	gtk+1.2-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
@@ -52,16 +51,6 @@ developing programs using the Joystick Wrapper library.
 %{common_description}
 
 
-%package -n jscalibrator
-Summary:	Joystick calibration utility
-Group:		System/Libraries
-
-%description -n jscalibrator
-jscalibrator is a joystick calibration utility.
-
-%{common_description}
-
-
 %prep
 %setup -q
 perl -pi -e 's|#include <jsw.h>|#include "../include/jsw.h"|' js*/*.{c,h}
@@ -70,14 +59,10 @@ perl -pi -e 's|#include <jsw.h>|#include "../include/jsw.h"|' js*/*.{c,h}
 pushd libjsw
   make CFLAGS="$RPM_OPT_FLAGS -fPIC" LIBS=-lstdc++
 popd
-pushd jscalibrator
-  make '*.o'
-  make CC=g++ LIB_DIRS=-L../libjsw
-popd
 
 %install
 rm -rf %{buildroot}
-for d in libjsw jscalibrator; do
+for d in libjsw; do
  pushd $d
  make install \
   PREFIX=%{buildroot}%{_prefix} \
@@ -105,11 +90,3 @@ rm -rf %{buildroot}
 %{_includedir}/jsw.h
 %{_libdir}/libjsw.so
 %{_mandir}/man3/*.3*
-
-%files -n jscalibrator
-%{_bindir}/jscalibrator
-%{_iconsdir}/jscalibrator.xpm
-%{_datadir}/libjsw/help/*.html
-%{_datadir}/libjsw/help/*.png
-%{_mandir}/man1/*.1*
-
