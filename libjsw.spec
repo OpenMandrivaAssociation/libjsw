@@ -90,3 +90,54 @@ rm -rf %{buildroot}
 %{_includedir}/jsw.h
 %{_libdir}/libjsw.so
 %{_mandir}/man3/*.3*
+
+
+%changelog
+* Thu Feb 10 2011 Funda Wang <fwang@mandriva.org> 1.5.8-5mdv2011.0
++ Revision: 637191
+- only build libs
+
+  + Oden Eriksson <oeriksson@mandriva.com>
+    - rebuild
+
+* Sun Mar 14 2010 Guillaume Rousse <guillomovitch@mandriva.org> 1.5.8-3mdv2010.1
++ Revision: 519104
+- fix build dependencies
+- fix dependencies
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - rebuild
+
+  + Emmanuel Andry <eandry@mandriva.org>
+    - New version 1.5.8
+    - drop BR gtk1.2-devel
+
+* Thu Jan 08 2009 Guillaume Bedot <littletux@mandriva.org> 1.5.7-1mdv2009.1
++ Revision: 327084
+- Fix underlinking
+- New policies and proposals
+- 1.5.7
+
+* Fri Jul 25 2008 Thierry Vignaud <tv@mandriva.org> 1.5.6-4mdv2009.0
++ Revision: 248839
+- rebuild
+
+  + Pixel <pixel@mandriva.com>
+    - do not call ldconfig in %%post/%%postun, it is now handled by filetriggers
+
+* Wed Jan 02 2008 Olivier Blin <oblin@mandriva.com> 2mdv2008.1-current
++ Revision: 140924
+- restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+
+* Fri Jan 05 2007 Olivier Blin <oblin@mandriva.com> 1.5.6-2mdv2007.0
++ Revision: 104303
+- fix library installation on x86_64
+- build with -fPIC to fix x86_64 build
+- buildrequire gtk+1.2-devel
+- initial libjsw and jscalibrator release
+- Create libjsw
+
