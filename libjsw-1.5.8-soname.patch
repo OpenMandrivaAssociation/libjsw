@@ -1,0 +1,29 @@
+diff -urN libjsw-1.5.8/libjsw/Makefile libjsw-1.5.8-patched/libjsw/Makefile
+--- libjsw-1.5.8/libjsw/Makefile	2013-06-05 21:35:25.434640655 +1100
++++ libjsw-1.5.8-patched/libjsw/Makefile	2013-06-05 21:46:27.412832244 +1100
+@@ -20,7 +20,10 @@
+ # Library Name and Version:
+ #
+ LIBPFX = libjsw
+-LIBVER = 1.5.8
++LIBMAJOR = 1
++LIBMINOR = 5
++LIBPATCH = 8
++LIBVER = $(LIBMAJOR).$(LIBMINOR).$(LIBPATCH)
+ 
+ 
+ # ########################################################################
+@@ -96,11 +99,11 @@
+ 
+ modules: $(OBJ_C) $(OBJ_CPP)
+ 	@echo  -n "Linking modules..."
+-	@$(CC) $(OBJ_C) $(OBJ_CPP) -Wl,-soname=$(LIB) -shared -o $(LIB) $(LIBS) $(LIB_DIRS)
++	@$(CC) $(OBJ_C) $(OBJ_CPP) -Wl,-soname=$(LIBPFX).so.$(LIBMAJOR) -shared -o $(LIB) $(LIBS) $(LIB_DIRS)
+ 	@echo -n "   "
+ 	@$(RM) $(RMFLAGS) $(LIBPFX).so
+ 	@$(LINK) -s $(LIB) $(LIBPFX).so
+-	@$(LINK) -s $(LIB) $(LIBPFX).so.1
++	@$(LINK) -s $(LIB) $(LIBPFX).so.$(LIBMAJOR)
+ 	@-$(LS) $(LSFLAGS) $(LIB)
+ 
+ prebuild:

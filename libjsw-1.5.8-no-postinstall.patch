@@ -1,0 +1,12 @@
+diff -urN libjsw-1.5.8/libjsw/Makefile libjsw-1.5.8-patched/libjsw/Makefile
+--- libjsw-1.5.8/libjsw/Makefile	2013-06-05 21:47:53.885579954 +1100
++++ libjsw-1.5.8-patched/libjsw/Makefile	2013-06-05 21:50:18.580387719 +1100
+@@ -150,7 +150,7 @@
+ 
+ HR = "-------------------------------------------------------------------------"
+ 
+-install: preinstall install_lib install_devel install_data postinstall
++install: preinstall install_lib install_devel install_data
+ 
+ install_lib:
+ 	@$(MKDIR) $(MKDIRFLAGS) $(JSW_LIB_DIR)

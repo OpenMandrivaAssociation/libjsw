@@ -5,12 +5,14 @@
 Summary:	Joystick Wrapper library
 Name:		libjsw
 Version:	1.5.8
-Release:	6
+Release:	7
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://wolfsinger.com/~wolfpack/packages/
 Source0:	http://wolfsinger.com/~wolfpack/packages/%{name}-%{version}.tar.bz2
 Patch0:		libjsw-1.5.8-no-strip.patch
+Patch1:		libjsw-1.5.8-soname.patch
+Patch2:		libjsw-1.5.8-no-postinstall.patch
 
 %description
 The Joystick Wrapper library (libjsw) is designed to provide a uniform
@@ -61,6 +63,8 @@ input error correction.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
+%patch2 -p1
 perl -pi -e 's|#include <jsw.h>|#include "../include/jsw.h"|' js*/*.{c,h}
 
 %build
