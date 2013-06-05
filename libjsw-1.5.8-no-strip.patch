@@ -1,0 +1,15 @@
+diff -urN libjsw-1.5.8/libjsw/Makefile libjsw-1.5.8-patched/libjsw/Makefile
+--- libjsw-1.5.8/libjsw/Makefile	2009-02-27 18:00:00.000000000 +1000
++++ libjsw-1.5.8-patched/libjsw/Makefile	2013-06-05 21:31:12.830133113 +1100
+@@ -118,9 +118,9 @@
+ #
+ 
+ INSTALL      = install
+-INSTBINFLAGS = -m 0755 -s
++INSTBINFLAGS = -m 0755
+ INSTUIDFLAGS = -m 4755
+-INSTLIBFLAGS = -m 0755 -s
++INSTLIBFLAGS = -m 0755
+ INSTINCFLAGS = -m 0644
+ INSTMANFLAGS = -m 0644
+ INSTCFGFLAGS = -m 0644
