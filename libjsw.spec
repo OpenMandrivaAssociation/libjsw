@@ -5,7 +5,7 @@
 Summary:	Joystick Wrapper library
 Name:		libjsw
 Version:	1.5.8
-Release:	7
+Release:	8
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://wolfsinger.com/~wolfpack/packages/
