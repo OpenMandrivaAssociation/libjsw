@@ -8,7 +8,7 @@ Version:	1.5.8
 Release:	8
 License:	GPLv2+
 Group:		System/Kernel and hardware
-Url:		http://wolfsinger.com/~wolfpack/packages/
+Url:		https://wolfsinger.com/~wolfpack/packages/
 Source0:	http://wolfsinger.com/~wolfpack/packages/%{name}-%{version}.tar.bz2
 Patch0:		libjsw-1.5.8-no-strip.patch
 Patch1:		libjsw-1.5.8-soname.patch
